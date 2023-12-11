@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import TranslationForm
 from .models import Translation
-from googletrans import Translator  # Install the 'googletrans' library
+from googletrans import Translator
 
+def home(request):
+    return redirect(translate_text)
 def translate_text(request):
     if request.method == 'POST':
         form = TranslationForm(request.POST)
