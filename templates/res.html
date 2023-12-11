@@ -1,0 +1,21 @@
+<!-- translator/templates/translator/translation_result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Result</title>
+</head>
+<body>
+    <h1>Translation Result</h1>
+
+    <p>Original Text: {{ form.source_text.value }}</p>
+    <p>Source Language: {{ form.source_language.value }}</p>
+    <p>Target Language: {{ form.target_language.value }}</p>
+
+    <p>Translated Text: {{ translated_text }}</p>
+
+    <a href="{% url 'translate_text' %}">Back to Translation</a>
+</body>
+</html>
